@@ -1,12 +1,19 @@
-const Discord = require(`discord.js`);
+/*
+  Send a user a link to their avatar
+*/
+
+// Import the discord.js module
+const Discord = require('discord.js');
+
+// Create an instance of a Discord client
 const client = new Discord.Client();
 
-client.on(`message`,(message) => {
-    if (message.content == `Ahmed`) {
-         message.channel.sendMessage(`The King ?`);
-    }
-    
-    client.on('ready', () => {
+// The token of your bot - https://discordapp.com/developers/applications/me
+const token = 'your bot token here';
+
+// The ready event is vital, it means that your bot will only start reacting to information
+// from Discord _after_ ready is emitted
+client.on('ready', () => {
   console.log('I am ready!');
 });
 
@@ -16,7 +23,8 @@ client.on('message', message => {
   if (message.content === 'what is my avatar') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
-    
+  }
 });
 
-client.login(`MzU3NTM3ODc5ODYzNDU5ODQx.DVsTXw.rxNUdEudQkAK5LSDUt2QRUbkZ2g`);
+// Log our bot in
+client.login(MzU3NTM3ODc5ODYzNDU5ODQx.DVtE4A.hdH7EIwi7z3M2xSsPvr9yMYbb4A);
