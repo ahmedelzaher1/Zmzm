@@ -31,7 +31,6 @@ client.on('message', message => {
         .catch(console.log);
     } else {
       message.channel.sendMessage('You need to join a voice channel first!');
-    }
   }
 });
 
