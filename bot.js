@@ -26,12 +26,14 @@ client.on('message', message => {
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
         .then(connection => { // Connection is an instance of VoiceConnection
-          message.reply('I have successfully connected to the channel!');
+          message.channel.sendMessage('I have successfully connected to the channel!');
         })
         .catch(console.log);
     } else {
       message.channel.sendMessage('You need to join a voice channel first!');
-  }
+    }
 });
 
+    
+    
 Client.login(`MzU3NTM3ODc5ODYzNDU5ODQx.DVsTXw.rxNUdEudQkAK5LSDUt2QRUbkZ2g`);
