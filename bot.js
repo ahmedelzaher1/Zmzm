@@ -1,24 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
-
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.channel.sendMessage(`pong`);
-  	}
-});
-
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-});
+client.login('MzU3NTM3ODc5ODYzNDU5ODQx.DJrbzg.7JUTLGGfH60BpFm2wBJULLIHCqg');
 
 client.on('message', message => {
   // Voice only works in guilds, if the message does not come from a guild,
@@ -38,6 +21,3 @@ client.on('message', message => {
     }
   }
 });
-
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
