@@ -1,15 +1,10 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const Discord = require(`discord.js`);
+const Client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
+Client.on(`message`,(message) => {
+    if (message.content == `ping`) {
+         message.channel.sendMessage(`pong`);
+    }
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.channel.sendMessage(`pong`);
-  	}
-});
-
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+Client.login(`MzU3NTM3ODc5ODYzNDU5ODQx.DVsTXw.rxNUdEudQkAK5LSDUt2QRUbkZ2g`);
