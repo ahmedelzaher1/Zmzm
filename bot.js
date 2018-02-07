@@ -48,5 +48,14 @@ Client.on('message', message => {
   }
 });
 
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === '-رابط') {
+    // Send "pong" to the same channel
+    message.channel.send('https://discord.gg/V6Xf3V9');
+  }
+});
+
 // Log our bot in
 Client.login(token);
