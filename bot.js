@@ -59,7 +59,7 @@ client.on('message', message => {
   // If the message is "ping"
   if (message.content === 'W1') {
     // Send "pong" to the same channel
-    message.channel.send('Welcome To Strom ✨');
+    message.channel.send(' ✨ ✨ Welcome To Storm  ✨ ✨');
   }
 });
 
