@@ -63,5 +63,9 @@ client.on('message', message => {
   }
 });
 
+client.on('voiceStateUpdate', (newMember, oldMember) => {
+// do stuff
+});
+
 // Log our bot in
 client.login(token);
