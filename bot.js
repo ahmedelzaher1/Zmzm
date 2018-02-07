@@ -17,6 +17,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
@@ -26,6 +27,7 @@ client.on('guildMemberAdd', member => {
   // Send the message, mentioning the member
   channel.send(`Welcome to the server, ${member}`);
 });
+ 
 
 Client.on(`message`,(message) => {
     if (message.content == `ping`) {
@@ -33,17 +35,20 @@ Client.on(`message`,(message) => {
     }
 });
 
+
 Client.on(`message`,(message) => {
     if (message.content == `Ahmed`) {
          message.channel.sendMessage(`The King ?`);
     }
 });
 
+
 Client.on(`message`,(message) => {
     if (message.content == `Shehab
-         message.channel.sendMessage(`The Best Gamer);
+         message.channel.sendMessage(`The Best Gamer ?);
     }
 });
+
 
 / Create an event listener for messages
 client.on('message', message => {
