@@ -10,9 +10,9 @@ Client.on(`message`,(message) => {
 // Create an event listener for messages
 Client.on('message', message => {
   // If the message is "what is my avatar"
-  if (message.content === 'what is my avatar') {
+  if (message.content === 'avatar') {
     // Send the user's avatar URL
-    message.channel.sendMessage(message.author.avatar);
+    message.channel.sendMessage(message.author.avatarURL);
   }
 });
     
