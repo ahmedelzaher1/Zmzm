@@ -12,7 +12,7 @@ Client.on('message', message => {
   // If the message is "what is my avatar"
   if (message.content === 'what is my avatar') {
     // Send the user's avatar URL
-    message.channel.sendMessage(message.author.avatarURL);
+    message.channel.sendMessage(message.author.avatar);
   }
 });
     
