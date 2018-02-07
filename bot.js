@@ -36,5 +36,23 @@ client.on('message', message => {
   }
 });
 
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'Ahmed') {
+    // Send "pong" to the same channel
+    message.channel.send('The King ?');
+  }
+});
+
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'Shehab') {
+    // Send "pong" to the same channel
+    message.channel.send('The Best Gamer ?');
+  }
+});
+
 // Log our bot in
 client.login(token);
