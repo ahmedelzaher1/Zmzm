@@ -54,5 +54,14 @@ client.on('message', message => {
   }
 });
 
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'W1') {
+    // Send "pong" to the same channel
+    message.channel.send('Welcome To Strom ✨');
+  }
+});
+
 // Log our bot in
 client.login(token);
