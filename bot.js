@@ -16,12 +16,6 @@ Client.on('message', message => {
   }
 });
 
-// The ready event is vital, it means that your bot will only start reacting to information
-// from Discord _after_ ready is emitted
-client.on('ready', () => {
-  console.log('I am ready!');
-});
-
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
@@ -29,6 +23,7 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
     message.channel.sendMessage(`Welcome to the server, ${member}`);
+  }
 });
 
     
