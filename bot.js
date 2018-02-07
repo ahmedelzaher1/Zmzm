@@ -7,6 +7,18 @@ Client.on(`message`,(message) => {
     }
 });
 
+Client.on(`message`,(message) => {
+    if (message.content == `Ahmed`) {
+         message.channel.sendMessage(`The King?`);
+    }
+});
+
+Client.on(`message`,(message) => {
+    if (message.content == `Shehab`) {
+         message.channel.sendMessage(`The Best Gamer ?`);
+    }
+});
+
 // Create an event listener for messages
 Client.on('message', message => {
   // If the message is "what is my avatar"
