@@ -54,25 +54,6 @@ client.on('message', message => {
   }
 });
 
-// Create a new webhook
-const hook = new Discord.WebhookClient('webhook id', 'webhook token');
-
-// Send a message using the webhook
-hook.send('I am now alive!');
-
-client.on('ready', () => {
-  console.log('I am ready!');
-});
-
-// Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-});
 
 // Log our bot in
 client.login(token);
