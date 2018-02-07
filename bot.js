@@ -7,7 +7,7 @@ const token = 'MzU3NTM3ODc5ODYzNDU5ODQx.DVsTXw.rxNUdEudQkAK5LSDUt2QRUbkZ2g';
 
 // The ready event is vital, it means that your bot will only start reacting to information
 // from Discord _after_ ready is emitted
-Client.on('ready') => {
+Client.on('ready', () => {
   console.log('I am ready!');
 });
 
