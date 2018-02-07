@@ -27,5 +27,23 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 
+Client.on(`message`,(message) => {
+    if (message.content == `ping`) {
+         message.channel.sendMessage(`pong`);
+    }
+});
+
+Client.on(`message`,(message) => {
+    if (message.content == `Ahmed`) {
+         message.channel.sendMessage(`The King ?`);
+    }
+});
+
+Client.on(`message`,(message) => {
+    if (message.content == `Shehab
+         message.channel.sendMessage(`The Best Gamer);
+    }
+});
+
 // Log our bot in
 client.login(token);
